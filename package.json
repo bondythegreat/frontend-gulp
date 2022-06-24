@@ -1,0 +1,34 @@
+{
+  "name": "frontend-gulp",
+  "version": "0.0.1",
+  "description": "Gulp to bundle css and js",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "bootstrap": "^5.1.3",
+    "jquery": "^3.6.0"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-mode": "^1.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-uglify": "^3.0.2"
+  },
+  "scripts": {
+    "dev": "gulp --development",
+    "watch": "gulp watch --development",
+    "build": "gulp --production",
+    "prod": "gulp --production"
+  },
+  "keywords": [
+    "gulp",
+    "gulp4",
+    "js",
+    "sass"
+  ],
+  "author": "bondan sentanu mintardjo",
+  "license": "ISC",
+  "homepage": "https://bondan.senta.nu/"
+}
