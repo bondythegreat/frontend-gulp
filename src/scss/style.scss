@@ -1,2 +1,25 @@
 @import "includes/_variables";
 @import "includes/_typography";
+
+@import "includes/_answer-your-body-page";
+
+body {
+  background-color: $bg-color;
+}
+.container {
+  max-width: 1200px;
+}
+
+.image-container {
+  margin-bottom: $gap;
+  img {
+    max-width: 100%;
+  }
+}
+.with-red-border {
+  border-bottom: 4px solid $red-color;
+}
+
+.with-white-border {
+  border-bottom: 1px solid $white-color;
+}

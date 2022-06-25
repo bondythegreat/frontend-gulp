@@ -1,1 +1,33 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&display=swap");
+$open-sans: "Open Sans", sans-serif;
+
+body {
+  font-family: $open-sans;
+  color: $white-color;
+}
+h1 {
+  font-weight: 300;
+  font-size: 42px;
+  line-height: 57px;
+  letter-spacing: 0.81px;
+}
+h2 {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 30px;
+}
+.red-heading {
+  color: $red-color;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 28px;
+}
+
+strong {
+  font-weight: 600;
+}
+p {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 28px;
+}
