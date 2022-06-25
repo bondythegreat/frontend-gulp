@@ -2,8 +2,10 @@
 @import "includes/_typography";
 
 @import "includes/_lightbox";
+@import "includes/_bootstrap-components";
 
 @import "includes/_answer-your-body-page";
+@import "includes/_all-the-latest-page";
 
 body {
   background-color: $bg-color;
@@ -15,7 +17,7 @@ body {
 .image-container {
   margin-bottom: $gap;
   img {
-    max-width: 100%;
+    width: 100%;
   }
 }
 .with-red-border {
@@ -24,4 +26,12 @@ body {
 
 .with-white-border {
   border-bottom: 1px solid $white-color;
+}
+
+a.link {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 30px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid $red-color;
 }

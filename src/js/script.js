@@ -1,3 +1,16 @@
 $(document).ready(function () {
-  console.log("hai ");
+  $("a").on("click", function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+    console.log($(this));
+  });
+
+  $(".card[role='button']").on("click", function (e) {
+    var link = $(this).find("a").attr("href");
+    console.log("link", link);
+    if (link) {
+      window.location = link;
+    }
+    return false;
+  });
 });
