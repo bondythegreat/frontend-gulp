@@ -1,9 +1,11 @@
 $(document).ready(function () {
-  $("a").on("click", function (e) {
-    e.preventDefault();
-    e.stopPropagation();
-    console.log($(this));
-  });
+  $("a")
+    .not(".lightbox-link")
+    .on("click", function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      console.log($(this));
+    });
 
   $(".card[role='button']").on("click", function (e) {
     var link = $(this).find("a").attr("href");
