@@ -74,7 +74,12 @@ gulp.task("browserSync", function () {
   });
 });
 
-gulp.task("watch", gulp.series("browserSync"), function () {
+gulp.task("watch", function () {
+  browserSync.init({
+    server: {
+      baseDir: "./",
+    },
+  });
   gulp.watch("src/scss/**/*", gulp.series("pack-css"));
   gulp.watch("src/img/**/*", gulp.series("pack-images"));
   gulp.watch("src/js/*.js", gulp.series("pack-js"));
