@@ -1,6 +1,20 @@
 .card {
   border-radius: 0;
   border: none;
+  .card-img-top-container {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+  }
+  .card-img-top {
+    border-radius: 0;
+    background-size: cover;
+    padding-top: 70%;
+    transition: all $transition-time;
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
   .card-body {
     padding: 27px 0;
     background-color: $bg-color;
