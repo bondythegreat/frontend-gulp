@@ -1,0 +1,12 @@
+.lb-nav {
+  a.lb-prev {
+    background: url(../img/lightbox/prev.png) left 50% no-repeat;
+  }
+  a.lb-next {
+    background: url(../img/lightbox/next.png) right 50% no-repeat;
+  }
+}
+
+.lb-cancel {
+  background-image: url(../img/loading.gif);
+}
