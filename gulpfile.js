@@ -2,7 +2,6 @@ var gulp = require("gulp"),
   sass = require("gulp-sass")(require("sass")),
   browserSync = require("browser-sync").create(),
   concat = require("gulp-concat"),
-  gulpCopy = require("gulp-copy"),
   uglify = require("gulp-uglify"),
   minify = require("gulp-minify-css"),
   imagemin = require("gulp-imagemin"),
@@ -67,11 +66,15 @@ gulp.task("copy-vendors-images", async function () {
     .pipe(gulp.dest("build/img/lightbox"));
 });
 
-gulp.task("serve", function () {
+gulp.task("browserSync", function () {
   browserSync.init({
-    server: "./",
+    server: {
+      baseDir: "./",
+    },
   });
+});
 
+gulp.task("watch", gulp.series("browserSync"), function () {
   gulp.watch("src/scss/**/*", gulp.series("pack-css"));
   gulp.watch("src/img/**/*", gulp.series("pack-images"));
   gulp.watch("src/js/*.js", gulp.series("pack-js"));
@@ -86,6 +89,7 @@ gulp.task(
     "pack-vendors-css",
     "pack-css",
     "pack-images",
-    "copy-vendors-images"
+    "copy-vendors-images",
+    "browserSync"
   )
 );

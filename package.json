@@ -23,7 +23,7 @@
   },
   "scripts": {
     "dev": "gulp --development",
-    "serve": "gulp serve --development",
+    "watch": "gulp watch --development",
     "build": "gulp --production",
     "prod": "gulp --production"
   },
